@@ -7,6 +7,8 @@ import org.graphstream.graph.implementations.SingleGraph;
 public class TestMaxFlow {
 
     public static void main(String[] args) {
+
+        System.setProperty("org.graphstream.ui","swing");
         Graph g = new SingleGraph("test");
         g.addNode("s");
         g.addNode("1");
@@ -33,6 +35,7 @@ public class TestMaxFlow {
             if (flow > 0) e.setAttribute("ui.label", "" + flow);
             if (cap == flow) e.setAttribute("ui.style", "fill-color: red;");
         });
-    }
 
+
+    }
 }
