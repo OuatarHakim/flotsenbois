@@ -1,0 +1,28 @@
+DGS004
+autoroutes 0 0
+
+an A x:0 y:1
+an B x:0 y:1
+an C x:0 y:1
+an D x:0 y:1
+an E x:0 y:1
+an F x:0 y:1
+an G x:0 y:1
+an H x:0 y:1
+an I x:0 y:1
+
+
+ae AB A > B cap:800
+ae AC A > C cap:700
+ae BD B > D cap:600
+ae BE B > E cap:100
+ae CF C > F cap:300
+ae CE C > E cap:300
+ae CD C > D cap:100
+ae DH D > H cap:200
+ae DG D > G cap:700
+ae EG E > G cap:500
+ae FG F > G cap:200
+ae FH F > H cap:200
+ae GI G > I cap:500
+ae HI H > I cap:1000
