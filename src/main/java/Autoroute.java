@@ -1,3 +1,4 @@
+import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.DefaultGraph;
@@ -5,6 +6,8 @@ import org.graphstream.stream.file.FileSource;
 import org.graphstream.stream.file.FileSourceDGS;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class Autoroute {
 
@@ -17,6 +20,18 @@ public class Autoroute {
 
         source = g.getNode("A");
         destination = g.getNode("I");
+
+        ArrayList<Node> nodesUpdate = new ArrayList<Node>();
+        nodesUpdate.add(g.getNode("A"));
+        nodesUpdate.add(g.getNode("C"));
+        nodesUpdate.add(g.getNode("D"));
+        nodesUpdate.add(g.getNode("H"));
+        nodesUpdate.add(g.getNode("I"));
+
+        Stream<Edge> edgesUpdate = g.edges().filter(e -> nodesUpdate.contains(e.getNode1()));
+
+
+
 
 
     }
