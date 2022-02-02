@@ -12,3 +12,7 @@ B.  Construction de graphe associé au réseau routier et le mettre sous forme d
    
 
 C.  Donnez la solution du problème de flot max en utilisant l'algorithme mis à votre disposition. Vous afficherez le réseau, les valeurs du flot sur les arêtes, et vous mettrez en évidence les arêtes saturées.   
+   ![Flots max d'autoroutes](Data/flotMax.png)   
+
+
+

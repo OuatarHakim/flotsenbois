@@ -1,3 +1,4 @@
+import maxflow.MaxFlow;
 import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
@@ -15,22 +16,30 @@ public class Autoroute {
     private  static Node destination;
 
     public static  void main(String[] args){
-        System.setProperty("org.graphStream.ui" , "swing");
+        System.setProperty("org.graphstream.ui","swing");
         Graph g = readDGSfile("./Data/autoroute.dgs","Autoroute");
-
+        g.setAttribute("ui.stylesheet" ,"url('./Data/style.css')");
         source = g.getNode("A");
         destination = g.getNode("I");
+        g.display(false);
 
-        ArrayList<Node> nodesUpdate = new ArrayList<Node>();
-        nodesUpdate.add(g.getNode("A"));
-        nodesUpdate.add(g.getNode("C"));
-        nodesUpdate.add(g.getNode("D"));
-        nodesUpdate.add(g.getNode("H"));
-        nodesUpdate.add(g.getNode("I"));
+        MaxFlow mf = new MaxFlow();
+        mf.setCapacityAttribute("cap");
+        mf.init(g);
+        mf.setSource(source);
+        mf.setSink(destination);
+        mf.compute();
 
-        Stream<Edge> edgesUpdate = g.edges().filter(e -> nodesUpdate.contains(e.getNode1()));
-
-
+        System.out.println(mf.getFlow());
+        g.nodes().forEach((Node n )-> {
+            n.setAttribute("ui.label" ,""+ n.getId());
+        });
+        g.edges().forEach((Edge e)-> {
+            double flow = mf.getFlow(e);
+            double cap = mf.getCapacity(e);
+            if (flow > 0) e.setAttribute("ui.label", "" + flow + " / " + cap);
+            if (cap == flow) e.setAttribute("ui.style", "fill-color: red;");
+        });
 
 
 
