@@ -31,8 +31,12 @@ Notre réseau est flot max de 900 pour augmenter ce flot ,on remarque que les fl
 Si on augmente la capacité de DH on  profitera de tout le flux qui arrive vers D et on arrive à H avec un flux total de 200 depuis F + 700 de D on aura 900 pour HI et avec DH on serait à 1400 arrivée à I.
 
 
-  ![DH](./Data/dh-flotMax.png)   
+  ![Flot max - DH](./Data/dh-flotMax.png)   
 
 
+On remarque que la capacité de AB n'est pas au max , si on ajoute les 100 voitures qui restes sur AB , on a le meilleur choix d'augmenter la capacité est BD qui profitera de la capacité de DH ,
+on augmente BD .
+
+![Flot max - BD](./Data/bd-flotmax.png)   
 
 

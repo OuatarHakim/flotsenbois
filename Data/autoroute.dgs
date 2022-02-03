@@ -18,7 +18,7 @@ ae BE B > E cap:100
 ae CF C > F cap:300
 ae CE C > E cap:300
 ae CD C > D cap:100
-ae DH D > H cap:2500
+ae DH D > H cap:200
 ae DG D > G cap:700
 ae EG E > G cap:500
 ae FG F > G cap:200
