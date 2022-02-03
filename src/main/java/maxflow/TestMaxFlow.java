@@ -29,13 +29,13 @@ public class TestMaxFlow {
         mf.compute();
 
         System.out.println(mf.getFlow());
+
         g.edges().forEach((Edge e)-> {
             double flow = mf.getFlow(e);
             double cap = mf.getCapacity(e);
             if (flow > 0) e.setAttribute("ui.label", "" + flow);
             if (cap == flow) e.setAttribute("ui.style", "fill-color: red;");
         });
-
 
     }
 }

@@ -41,6 +41,8 @@ public class Autoroute {
             if (cap == flow) e.setAttribute("ui.style", "fill-color: red;");
         });
 
+        g.getEdge("DH").setAttribute("ui.style", "fill-color: #009999;");
+
 
 
     }

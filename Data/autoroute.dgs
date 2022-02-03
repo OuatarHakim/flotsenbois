@@ -5,9 +5,9 @@ an B x:1 y:2
 an C x:1 y:0
 an D x:3 y:2
 an E x:2.5 y:1
-an F x:3 y:0
+an F x:2.5 y:0
 an G x:4 y:2
-an H x:4 y:0
+an H x:5 y:0
 an I x:5 y:1
 
 
@@ -18,7 +18,7 @@ ae BE B > E cap:100
 ae CF C > F cap:300
 ae CE C > E cap:300
 ae CD C > D cap:100
-ae DH D > H cap:200
+ae DH D > H cap:2500
 ae DG D > G cap:700
 ae EG E > G cap:500
 ae FG F > G cap:200
